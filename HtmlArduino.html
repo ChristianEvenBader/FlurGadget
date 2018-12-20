@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arduno</title>
+    <script async>
+        document.addEventListener('DOMContentLoaded', function(){
+	    function ausgeben(ev) {
+		    document.getElementById('outputTime').value = ev.target.value;
+	        }
+	        document.getElementById('time1').addEventListener('input', ausgeben);
+        });
+    </script>
+  </head>
+  <body>
+    <h1>Arduino per Website ansprechen</h1>
+    <hr>
+    <p>Per Formlur soll ein Zeit-Wert übergeben werden, der im Arduino zur Anwendung kommt</p>
+    <form>
+        <label for "time1"><h2>Zeitwert</h2></label>
+            <input id="time1" type="range" min="100" max="2000" step="1" value="1000">
+            <output id="outputTime" for "time1">1000</output>
+    </form>
+  </body>
+</html>
